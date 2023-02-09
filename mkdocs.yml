@@ -1,0 +1,23 @@
+site_name: Pas2JS
+site_description: Documentação para auxílio na utilização do Pas2JS com exemplos
+site_url: https://guaracy.github.io/
+nav:
+  - Home: index.md
+  - Instalação: install.md
+  - Antes de começar: ac.md
+  - Web Browser Application:
+    - Criando o projeto: wba-start.md
+    - Animação: wba-anima.md
+  - About: about.md
+theme: material
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      use_pygments: true
+  - pymdownx.superfences
+
+plugins:
+  #- rss
+
