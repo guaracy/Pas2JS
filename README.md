@@ -1,2 +1,5 @@
 # Pas2JS
-Documentação e exemplos para utilização do PasJS (transpiler Pascal -> JavaScript)
+
+Exemplos para utilização do PasJS (transpiler Pascal -> JavaScript)
+
+Documentação em [Pas2JS](https://guaracy.github.io/Pas2JS/)
