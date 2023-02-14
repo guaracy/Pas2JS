@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="quinze.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uquinze.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+        <TopLine Value="40"/>
+        <CursorPos Y="47"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="fifteenengine.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="29"/>
+        <CursorPos X="29" Y="42"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../../PasWASM/fpcupdeluxe/lazarus/lcl/include/control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4306"/>
+        <CursorPos Y="4316"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../../PasWASM/fpcupdeluxe/lazarus/lcl/graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="209"/>
+        <CursorPos X="10" Y="209"/>
+        <UsageCount Value="10"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="28">
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="56" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="51" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="52" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="53" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="54" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="55" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="56" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="51" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="52" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="53" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="54" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="55" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="56" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="51" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="52" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="53" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="54" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="55" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="56" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="51" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="52" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="53" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="54" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="55" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="56" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="51" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="52" Column="19" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="55" Column="20" TopLine="41"/>
+      </Position>
+      <Position>
+        <Filename Value="uquinze.pas"/>
+        <Caret Line="52" Column="24" TopLine="37"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <Watches>
+      <Item>
+        <Expression Value="Board"/>
+      </Item>
+    </Watches>
+  </Debugging>
+</CONFIG>
