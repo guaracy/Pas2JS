@@ -5,7 +5,7 @@ unit uquinze;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls, LCLType,
   fifteenengine;
 
 type
@@ -15,10 +15,14 @@ type
   TForm1 = class(TForm)
     Button1: TButton;
     Button2: TButton;
+    Label1: TLabel;
+    Label2: TLabel;
     pb: TPanel;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormShow(Sender: TObject);
+    procedure pbClick(Sender: TObject);
   private
 
   public
@@ -37,32 +41,37 @@ implementation
 procedure TForm1.FormShow(Sender: TObject);
 begin
   pb.Caption:='';
+  pb.Color:=BACKGROUND;
   pb.width:=BSIZE*4+GAP*5;
   pb.Height:=pb.Width;
   BoardInit;
   DrawBoard;
 end;
 
+procedure TForm1.pbClick(Sender: TObject);
+begin
+  DrawBoard;
+end;
+
 procedure TForm1.DrawBoard;
 var
-  r:TRect;
-  i: Integer;
+  i, x, y: Integer;
 begin
   with pb.Canvas do begin
     for i:=0 to CSIZE do begin
-      r:=Rect(Board[i].x,Board[i].y,Board[i].x+BSIZE,Board[i].y+BSIZE);
+      x:=Board[i].x;
+      x:=x*BSIZE+x*GAP+GAP;
+      y:=Board[i].y;
+      y:=y*BSIZE+y*GAP+GAP;
       Brush.Color:=clYellow;
       Brush.Style:=bsSolid;
       if Board[i].n = 0 then begin
-        Brush.Color:=clRed;
-        Rectangle(R);
+        Brush.Color:=BACKGROUND;
+        Rectangle(x,y,x+BSIZE,y+BSIZE);
         Continue;
       end;
-      Rectangle(R);
-
-      TextOut(Board[i].x+7,Board[i].y+7,Board[i].n.ToString);
-      //Line(Board[i].x,Board[i].y,Board[i].x+BSIZE,Board[i].y+BSIZE);
-      //pb.Canvas.Rectangle(Board[i].x,Board[i].y,Board[i].x+BSIZE,Board[i].y+BSIZE);
+      Rectangle(x,y,x+BSIZE,y+BSIZE);
+      TextOut(x+7,y+7,Board[i].n.ToString);
     end;
   end;
 end;
@@ -75,12 +84,17 @@ end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
-  pb.Canvas.Brush.Color := clRed;
-  pb.Canvas.Brush.Style := bsSolid;
-  pb.Canvas.FillRect(0, 0, 100, 100);
-  pb.Canvas.Brush.Color := clYellow;
-  pb.canvas.Brush.Style := bsHorizontal;
-  pb.Canvas.Rectangle(100, 100, 200, 200);
+  if IsSolvable then
+    label1.Caption:='SOLUÇÃO'
+  else
+    label1.Caption:='*SEM SOLUÇÃO*';
+  DrawBoard;
+end;
+
+procedure TForm1.FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+begin
+  if DoMove(Key) then
+    DrawBoard;
 end;
 
 end.
