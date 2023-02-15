@@ -38,7 +38,9 @@ begin
   for i:=0 to CSIZE do
     if Board[i].n = 0 then begin
       Blank:=i;
-      writeln('blank=',i,' x=',Board[i].x,' y=',Board[i].y);
+      {$IFDEF LINUX}
+      writeln('blank=',i,' x=',Board[i].x,' y=',Board[i].y
+      {$ENDIF}
       Break;
     end;
 end;
@@ -110,10 +112,11 @@ end;
 
 Function IsSolvable:Boolean;
 var
-  sol : array[0..15] of integer = (12, 1, 10, 2, 7, 11, 4, 14, 5, 0, 9, 15, 8, 13, 6, 3); // solvable
-//  sol : array[0..15] of integer = (3, 9, 1, 15, 14, 11, 4, 6, 13, 0, 10, 12, 2, 7, 8, 5); // not solvable
-
-  i : integer;
+//  sol : array[0..15] of integer = (12, 1, 10, 2, 7, 11, 4, 14, 5, 0, 9, 15, 8, 13, 6, 3); // solvable
+  sol : array[0..15] of integer = (3, 9, 1, 15, 14, 11, 4, 6, 13, 0, 10, 12, 2, 7, 8, 5); // not solvable
+    //sol : array[0..15] of integer = (13, 10, 11, 6, 5, 7, 4, 8, 1, 12, 14, 9, 3, 15, 2, 0); // not solvable
+  dbc : integer;
+  i,j : integer;
   p,c : integer;
 begin
   for i:=0 to CSIZE do
@@ -122,11 +125,11 @@ begin
   SetBlank;
   p:=4-Board[Blank].y;
   for i:=0 to CSIZE - 1 do
-    if (Board[i].n > 0) and (Board[i+1].n > 0) then
-      if Board[i].n > Board[i+1].n then
-        c:=c + Board[i].n - i + 1;
-  writeln('c=',c,' p=',p);
-  Result:=True;
+    for j:=i to CSIZE -1 do
+      if (Board[i].n > 0) and (Board[j].n > 0) then
+        if Board[i].n > Board[j].n then
+          inc(c);
+  Result:=odd(c) xor even(p);
 end;
 
 end.

@@ -11,7 +11,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="36"/>
       </Unit>
       <Unit>
         <Filename Value="uquinze.pas"/>
@@ -21,7 +21,7 @@
         <ResourceBaseClass Value="Form"/>
         <TopLine Value="78"/>
         <CursorPos Y="92"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="36"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -30,9 +30,9 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="104"/>
-        <CursorPos X="4" Y="109"/>
-        <UsageCount Value="31"/>
+        <TopLine Value="112"/>
+        <CursorPos Y="131"/>
+        <UsageCount Value="36"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -68,124 +68,124 @@
     </Units>
     <JumpHistory HistoryIndex="29">
       <Position>
-        <Filename Value="uquinze.pas"/>
-        <Caret Line="79" TopLine="65"/>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="128" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="83" TopLine="79"/>
+        <Caret Line="129" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="84" TopLine="79"/>
+        <Caret Line="130" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="87" TopLine="79"/>
-      </Position>
-      <Position>
-        <Filename Value="uquinze.pas"/>
-        <Caret Line="79" TopLine="65"/>
+        <Caret Line="131" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="83" TopLine="79"/>
+        <Caret Line="128" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="84" TopLine="79"/>
+        <Caret Line="129" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="86" TopLine="76"/>
-      </Position>
-      <Position>
-        <Filename Value="uquinze.pas"/>
-        <Caret Line="79" TopLine="65"/>
+        <Caret Line="130" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="86" TopLine="76"/>
+        <Caret Line="131" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="88" TopLine="76"/>
+        <Caret Line="128" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="90" TopLine="76"/>
+        <Caret Line="129" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="94" TopLine="77"/>
+        <Caret Line="130" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="95" TopLine="78"/>
+        <Caret Line="131" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="96" TopLine="79"/>
+        <Caret Line="128" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="97" TopLine="80"/>
+        <Caret Line="129" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="38" Column="8" TopLine="29"/>
-      </Position>
-      <Position>
-        <Filename Value="uquinze.pas"/>
-        <Caret Line="86" TopLine="67"/>
+        <Caret Line="130" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="108" Column="88" TopLine="88"/>
-      </Position>
-      <Position>
-        <Filename Value="uquinze.pas"/>
-        <Caret Line="51" Column="13" TopLine="43"/>
-      </Position>
-      <Position>
-        <Filename Value="uquinze.pas"/>
-        <Caret Line="53" Column="13" TopLine="45"/>
+        <Caret Line="131" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="114" Column="5" TopLine="103"/>
+        <Caret Line="128" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="125" Column="27" TopLine="106"/>
+        <Caret Line="129" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="127" Column="38" TopLine="107"/>
+        <Caret Line="130" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="125" Column="30" TopLine="111"/>
+        <Caret Line="131" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="123" TopLine="111"/>
+        <Caret Line="128" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="124" TopLine="111"/>
+        <Caret Line="129" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="122" TopLine="111"/>
+        <Caret Line="130" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="123" TopLine="111"/>
+        <Caret Line="131" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="fifteenengine.pas"/>
-        <Caret Line="124" TopLine="111"/>
+        <Caret Line="128" TopLine="113"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="129" TopLine="113"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="130" Column="32" TopLine="113"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="116" Column="106" TopLine="112"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="132" Column="26" TopLine="112"/>
+      </Position>
+      <Position>
+        <Filename Value="fifteenengine.pas"/>
+        <Caret Line="133" Column="24" TopLine="112"/>
       </Position>
     </JumpHistory>
     <RunParams>
@@ -197,6 +197,12 @@
     <Watches>
       <Item>
         <Expression Value="Board"/>
+      </Item>
+      <Item>
+        <Expression Value="c"/>
+      </Item>
+      <Item>
+        <Expression Value="Result"/>
       </Item>
     </Watches>
   </Debugging>
