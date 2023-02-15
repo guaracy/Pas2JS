@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="C:\programas\lazarus_wa\fpcupdeluxe\fpc\bin\i386-win32\fpc.exe" Date="1447202933"/>
-  <Params Value=" -MObjFPC -Scghi -O1 -gw3 -gl -WG -l -vewnhibq -FiC:\devel\Pas2JS\15\lib\i386-win32 -FuC:\programas\lazarus_wa\fpcupdeluxe\lazarus\lcl\units\i386-win32\win32 -FuC:\programas\lazarus_wa\fpcupdeluxe\lazarus\lcl\units\i386-win32 -FuC:\programas\lazarus_wa\fpcupdeluxe\lazarus\components\freetype\lib\i386-win32 -FuC:\programas\lazarus_wa\fpcupdeluxe\lazarus\components\lazutils\lib\i386-win32 -FuC:\programas\lazarus_wa\fpcupdeluxe\lazarus\packager\units\i386-win32 -FuC:\devel\Pas2JS\15\ -FUC:\devel\Pas2JS\15\lib\i386-win32\ -FEC:\devel\Pas2JS\15\bin\ -oC:\devel\Pas2JS\15\bin\quinze.exe -dLCL -dLCLwin32 quinze.lpr"/>
-</CONFIG>
