@@ -35,7 +35,6 @@ var
 begin
   for pb:=0 to CSIZE do begin
     DivMod(pb,4,py,px);
-    writeln('pb=',pb,' x=',px,' y=',py);
     with Board[pb] do begin
       n:=pb;
       x:=px*BSIZE+px*GAP+GAP;
