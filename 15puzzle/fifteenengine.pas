@@ -5,13 +5,30 @@ unit fifteenengine;
 interface
 
 uses
-  Classes, SysUtils, Math, LCLType;
+  Classes, SysUtils, Math
+  {$IFNDEF BROWSER}
+    ,LCLType
+  {$ENDIF}
+  ;
+
 
 Const
   CSIZE = 15;
-  BSIZE = 50;
-  GAP = 2;
-  BACKGROUND = $00808080;
+  BSIZE = 100;
+  GAP = 4;
+  {$IFDEF BROWSER}
+    VK_UP    = 100;
+    VK_DOWN  = 101;
+    VK_RIGHT = 102;
+    VK_LEFT  = 103;
+    COLORBLANK = '#808080';
+    COLOROK    = '#b3ffb3';
+    COLORWRONG = '#ff9999';
+  {$ELSE}
+    COLORBLANK = $00808080;
+    COLOROK    =;
+    COLORWRONG =;
+  {$ENDIF}
 
 type Block = Record
     n,
@@ -38,8 +55,8 @@ begin
   for i:=0 to CSIZE do
     if Board[i].n = 0 then begin
       Blank:=i;
-      {$IFDEF LINUX}
-      writeln('blank=',i,' x=',Board[i].x,' y=',Board[i].y
+      {$IFNDEF WINDOWS}
+      writeln('blank=',i,' x=',Board[i].x,' y=',Board[i].y);
       {$ENDIF}
       Break;
     end;
@@ -50,15 +67,18 @@ var
   px,py,
   pb: Integer;
 begin
+  {$IFNDEF BROWSER}
   Randomize;
+  {$ENDIF}
   for pb:=0 to CSIZE do begin
     DivMod(pb,4,py,px);
     with Board[pb] do begin
-      n:=pb;
+      n:=pb+1;
       x:=px;
       y:=py;
     end;
   end;
+  Board[CSIZE].n:=0;
   Blank:=CSIZE;
 end;
 
@@ -75,6 +95,8 @@ begin
     end;
   end;
   SetBlank;
+  if not IsSolvable then
+    Shuffle;
 end;
 
 Function  CanMove(key:word):Boolean;
@@ -112,24 +134,30 @@ end;
 
 Function IsSolvable:Boolean;
 var
-//  sol : array[0..15] of integer = (12, 1, 10, 2, 7, 11, 4, 14, 5, 0, 9, 15, 8, 13, 6, 3); // solvable
-  sol : array[0..15] of integer = (3, 9, 1, 15, 14, 11, 4, 6, 13, 0, 10, 12, 2, 7, 8, 5); // not solvable
+  {$IFDEF DEBUG}
+  sol : array[0..15] of integer = (12, 1, 10, 2, 7, 11, 4, 14, 5, 0, 9, 15, 8, 13, 6, 3); // solvable
+  //sol : array[0..15] of integer = (3, 9, 1, 15, 14, 11, 4, 6, 13, 0, 10, 12, 2, 7, 8, 5); // not solvable
     //sol : array[0..15] of integer = (13, 10, 11, 6, 5, 7, 4, 8, 1, 12, 14, 9, 3, 15, 2, 0); // not solvable
-  dbc : integer;
+  {$ENDIF}
   i,j : integer;
   p,c : integer;
 begin
+  {$IFDEF DEBUG}
   for i:=0 to CSIZE do
     Board[i].n:=sol[i];
-  c:=0;
   SetBlank;
+  {$ENDIF}
+  c:=0;
   p:=4-Board[Blank].y;
   for i:=0 to CSIZE - 1 do
     for j:=i to CSIZE -1 do
       if (Board[i].n > 0) and (Board[j].n > 0) then
         if Board[i].n > Board[j].n then
           inc(c);
-  Result:=odd(c) xor even(p);
+  {$IFNDEF WINDOWS}
+  writeln('c=',c,' p=',p,' odd(c)=',odd(c),' odd(p)=',odd(p));
+  {$ENDIF}
+  Result:=odd(c) xor odd(p);
 end;
 
 end.

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/home/guaracy/PasWASM/fpcupdeluxe/ccr/pas2js-rtl/bin/x86_64-linux/pas2js" Date="1676343819"/>
+  <Params Value=" -Tbrowser -Pecmascript5 -MObjFPC -Sc -O1 -l -vewnhibq -Fi/home/guaracy/devel/Pas2JS/15puzzle/js -Fu/home/guaracy/devel/Pas2JS/15puzzle/ -FU/home/guaracy/devel/Pas2JS/15puzzle/js/ -FE/home/guaracy/devel/Pas2JS/15puzzle/ -o/home/guaracy/devel/Pas2JS/15puzzle/quinze_web.js -Jeutf-8 -Jirtl.js -Jc -Jminclude quinze_web.lpr"/>
+</CONFIG>

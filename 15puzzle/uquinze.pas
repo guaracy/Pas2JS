@@ -44,6 +44,7 @@ begin
   pb.Color:=BACKGROUND;
   pb.width:=BSIZE*4+GAP*5;
   pb.Height:=pb.Width;
+  pb.Font.Size:=BSIZE div 2;
   BoardInit;
   DrawBoard;
 end;
