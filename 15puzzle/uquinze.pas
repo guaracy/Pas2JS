@@ -13,16 +13,14 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
-    Button1: TButton;
-    Button2: TButton;
-    Label1: TLabel;
-    Label2: TLabel;
-    pb: TPanel;
-    procedure Button1Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
+    btNew: TButton;
+    lbInfo: TLabel;
+    pnTitle: TPanel;
+    pnBoard: TPanel;
+    procedure btNewClick(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormShow(Sender: TObject);
-    procedure pbClick(Sender: TObject);
+    procedure pnBoardPaint(Sender: TObject);
   private
 
   public
@@ -40,25 +38,25 @@ implementation
 
 procedure TForm1.FormShow(Sender: TObject);
 begin
-  pb.Caption:='';
-  pb.Color:=BACKGROUND;
-  pb.width:=BSIZE*4+GAP*5;
-  pb.Height:=pb.Width;
-  pb.Font.Size:=BSIZE div 2;
+  pnBoard.Caption:='';
+  pnBoard.width:=BSIZE*4+GAP*5;
+  pnBoard.Height:=pnBoard.Width;
+  pnBoard.Font.Size:=BSIZE div 3;
   BoardInit;
-  DrawBoard;
 end;
 
-procedure TForm1.pbClick(Sender: TObject);
+procedure TForm1.pnBoardPaint(Sender: TObject);
 begin
   DrawBoard;
 end;
 
 procedure TForm1.DrawBoard;
 var
+  R: TRect;
+  ts: TTextStyle;
   i, x, y: Integer;
 begin
-  with pb.Canvas do begin
+  with pnBoard.Canvas do begin
     for i:=0 to CSIZE do begin
       x:=Board[i].x;
       x:=x*BSIZE+x*GAP+GAP;
@@ -67,28 +65,28 @@ begin
       Brush.Color:=clYellow;
       Brush.Style:=bsSolid;
       if Board[i].n = 0 then begin
-        Brush.Color:=BACKGROUND;
+        Brush.Color:=COLORBLANK;
         Rectangle(x,y,x+BSIZE,y+BSIZE);
         Continue;
       end;
+      ts := TextStyle;
+      ts.Alignment := taCenter;
+      ts.Layout := tlCenter;
+      if Board[i].n = i+1 then
+        Brush.Color:=COLOROK
+      else
+        Brush.Color:=COLORWRONG;
       Rectangle(x,y,x+BSIZE,y+BSIZE);
-      TextOut(x+7,y+7,Board[i].n.ToString);
+      R.Create(Point(x,y),BSIZE,BSIZE);
+      TextRect(R, 0, 0, Board[i].n.ToString, ts);
+      //TextOut(x+7,y+7,Board[i].n.ToString);
     end;
   end;
 end;
 
-procedure TForm1.Button1Click(Sender: TObject);
+procedure TForm1.btNewClick(Sender: TObject);
 begin
   Shuffle;
-  DrawBoard;
-end;
-
-procedure TForm1.Button2Click(Sender: TObject);
-begin
-  if IsSolvable then
-    label1.Caption:='SOLUÇÃO'
-  else
-    label1.Caption:='*SEM SOLUÇÃO*';
   DrawBoard;
 end;
 

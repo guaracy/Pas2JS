@@ -26,8 +26,8 @@ Const
     COLORWRONG = '#ff9999';
   {$ELSE}
     COLORBLANK = $00808080;
-    COLOROK    =;
-    COLORWRONG =;
+    COLOROK    = $00b3ffb3;
+    COLORWRONG = $009999ff;
   {$ENDIF}
 
 type Block = Record

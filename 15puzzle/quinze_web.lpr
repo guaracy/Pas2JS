@@ -31,9 +31,13 @@ begin
   btNew:=TJSHTMLButtonElement(getHTMLElement('bt_new'));
   btNew.OnClick := @NewGame;
   FCanvas:=TJSHTMLCanvasElement(document.getElementById('my_canvas'));
+  FCanvas.width:=window.innerWidth;
+  FCanvas.height:=window.innerHeight;
   FCanvas.width:=BSIZE*4+GAP*5;
   FCanvas.height:=FCanvas.width;
   FCtx:=TJSCanvasRenderingContext2D(FCanvas.getContext('2d'));
+  //Fctx.fillStyle:='#eeeeee';
+  //Fctx.fillRect(0,0,window.innerWidth,window.innerHeight);
   FCtx.font:='bold 40px Arial';
   FCtx.textAlign:= 'center';
   document.onkeydown:=@OnFormKeyPress;

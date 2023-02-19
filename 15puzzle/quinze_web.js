@@ -3394,6 +3394,8 @@ rtl.module("program",["System","BrowserApp","JS","Classes","SysUtils","Web","fif
       this.btNew = this.GetHTMLElement("bt_new");
       this.btNew.onclick = rtl.createSafeCallback(this,"NewGame");
       this.FCanvas = document.getElementById("my_canvas");
+      this.FCanvas.width = window.innerWidth;
+      this.FCanvas.height = window.innerHeight;
       this.FCanvas.width = (100 * 4) + (4 * 5);
       this.FCanvas.height = this.FCanvas.width;
       this.FCtx = this.FCanvas.getContext("2d");

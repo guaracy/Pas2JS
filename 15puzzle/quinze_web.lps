@@ -7,8 +7,9 @@
       <Unit>
         <Filename Value="quinze_web.lpr"/>
         <IsPartOfProject Value="True"/>
-        <TopLine Value="70"/>
-        <CursorPos X="35" Y="87"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="26"/>
+        <CursorPos X="11" Y="38"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
@@ -27,9 +28,8 @@
       </Unit>
       <Unit>
         <Filename Value="fifteenengine.pas"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="143"/>
+        <TopLine Value="135"/>
         <CursorPos X="22" Y="160"/>
         <UsageCount Value="10"/>
         <Loaded Value="True"/>

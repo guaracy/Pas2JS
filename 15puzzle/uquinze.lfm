@@ -2,59 +2,72 @@ object Form1: TForm1
   Left = 282
   Height = 498
   Top = 250
-  Width = 648
-  Caption = 'Form1'
+  Width = 749
+  Caption = '15 Puzzle'
   ClientHeight = 498
-  ClientWidth = 648
+  ClientWidth = 749
   KeyPreview = True
   OnKeyUp = FormKeyUp
   OnShow = FormShow
-  object Button1: TButton
-    Left = 8
+  Position = poScreenCenter
+  object btNew: TButton
+    AnchorSideLeft.Control = pnTitle
+    AnchorSideTop.Control = pnTitle
+    AnchorSideTop.Side = asrBottom
+    Left = 263
     Height = 25
-    Top = 8
-    Width = 75
+    Top = 77
+    Width = 288
+    BorderSpacing.Top = 5
     Caption = 'New'
-    OnClick = Button1Click
+    OnClick = btNewClick
     TabOrder = 0
   end
-  object pb: TPanel
-    Left = 96
+  object pnBoard: TPanel
+    Left = 8
     Height = 250
-    Top = 48
+    Top = 8
     Width = 250
     BevelOuter = bvNone
     Caption = 'Board'
-    Color = 121
     Font.Height = -24
     Font.Style = [fsBold]
     ParentBackground = False
     ParentColor = False
     ParentFont = False
     TabOrder = 1
-    OnClick = pbClick
+    OnPaint = pnBoardPaint
   end
-  object Label1: TLabel
-    Left = 98
-    Height = 16
-    Top = 312
-    Width = 41
-    Caption = 'Label1'
-  end
-  object Label2: TLabel
-    Left = 296
-    Height = 16
-    Top = 312
-    Width = 41
-    Caption = 'Label2'
-  end
-  object Button2: TButton
-    Left = 8
-    Height = 25
-    Top = 40
-    Width = 75
-    Caption = 'Button2'
-    OnClick = Button2Click
+  object pnTitle: TPanel
+    AnchorSideLeft.Control = pnBoard
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = pnBoard
+    Left = 263
+    Height = 64
+    Top = 8
+    Width = 288
+    BorderSpacing.Left = 5
+    Caption = '15 Puzzle'
+    Color = clBlack
+    Font.Color = clWhite
+    Font.Height = -33
+    Font.Style = [fsBold]
+    ParentBackground = False
+    ParentColor = False
+    ParentFont = False
     TabOrder = 2
+  end
+  object lbInfo: TLabel
+    AnchorSideLeft.Control = pnTitle
+    AnchorSideTop.Control = btNew
+    AnchorSideTop.Side = asrBottom
+    Left = 263
+    Height = 56
+    Top = 107
+    Width = 288
+    Alignment = taCenter
+    AutoSize = False
+    BorderSpacing.Top = 5
+    Caption = 'Move tiles in grid to order them from 1 to 15. '#10'Use arrows to move.'
   end
 end
